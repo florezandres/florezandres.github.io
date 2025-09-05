@@ -1,0 +1,31 @@
+.taskbar {
+    background-color: #c3c3c3;
+    color: white;
+    padding: 2px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 3px solid #fff;
+}
+
+button {
+    font-family: "Windows 98";
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    background-color: #c0c0c0;
+    border: 2px solid #fff;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+    padding: 1px 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.taskbar-logo {
+    width: 21px;
+    vertical-align: middle;
+}

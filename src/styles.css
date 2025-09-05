@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-primary: #ff0000;
+    --color-secondary: #00ff00;
+    --color-tertiary: #0000ff;
+}
+
+body {
+    font-family: 'Windows 98', sans-serif;
+    background-color: #008080;
+}
