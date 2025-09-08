@@ -1,31 +1,88 @@
 .taskbar {
-    background-color: #c3c3c3;
+    background-color: var(--light-grey);
+    height: var(--taskbar-height);
     color: white;
-    padding: 2px;
     position: fixed;
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     border-top: 3px solid #fff;
+    justify-content: space-between;
+    padding: 2.5px;
 }
 
-button {
+.tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.windows-button {
+    display: flex;
+    width: auto;
     font-family: "Windows 98";
     font-size: 17px;
     font-weight: bold;
     color: black;
     background-color: #c0c0c0;
     border: 2px solid #fff;
-    border-right-color: #808080;
-    border-bottom-color: #808080;
-    padding: 1px 8px;
+    border-right-color: black;
+    border-bottom-color: black;
+    padding: 1px 4px;
+    padding-left: 2px;
     cursor: pointer;
     box-sizing: border-box;
+    box-shadow: inset -1.25px -1.25px 0px #818181, inset 1.25px 1.25px 0px #d0d0d0;
 }
 
 .taskbar-logo {
     width: 21px;
-    vertical-align: middle;
+    vertical-align: top;
+}
+
+.windows-button:active {
+    border: 2px solid black;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    box-shadow: inset 1.25px 1.25px 0px #818181, inset -1.25px -1.25px 0px #d0d0d0;
+}
+
+span {
+    margin-left: 5px;
+}
+
+.divisor {
+    height: 27px;
+    width: 1.5px;
+    background-color: var(--white);
+    border-left: var(--grey) 1.6px solid;
+    border-right: var(--white) 1.6px solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.divisor-fat {
+    height: 20px;
+    width: 4px;
+    background-color: var(--light-grey);
+    border-left: var(--white) 2px solid;
+    border-top: var(--white) 2px solid;
+    border-right: var(--grey) 2px solid;
+    border-bottom: var(--grey) 2px solid;
+    margin-left: 4px;
+    margin-right: 4px;
+    box-sizing: border-box;
+}
+
+.time {
+    color: black;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
 }
