@@ -26,6 +26,15 @@
     width: fit-content;
 }
 
+.icon p {
+    margin: 0;
+}
+
+.icon:focus p {
+    outline: 1px dotted white;
+    outline-offset: 2px;
+}
+
 .icon img {
     width: 50px;
     padding: 10px 20px;
