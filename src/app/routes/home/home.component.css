@@ -40,3 +40,89 @@
     padding: 10px 20px;
 }
 
+
+.window {
+  width: 600px;
+  height: 400px;
+  background-color: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: black;
+  border-bottom-color: black;
+  box-shadow: inset -2px -2px #818181, inset 2px 2px #d0d0d0;
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(50% - 200px - var(--taskbar-height));
+  left: calc(50% - 300px);
+
+  min-width: 200px;
+  min-height: 100px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 3px;
+}
+
+.window-title {
+  height: 20px;
+  position: sticky;
+  margin: 0;
+  padding: 2px 5px;
+  color: white;
+  font-family: 'Windows 98';
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: move;
+}
+
+.window header {
+  background: linear-gradient(to right, #000080, #1d81c6);
+  border-bottom: 2px solid var(--light-grey);
+  display: flex;
+  flex-direction: row;
+}
+.handle {
+  width: 100%;
+}
+
+.handle img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.handle svg {
+  color: #ccc;
+}
+
+.handle-buttons {
+  margin: 3px 3px;
+  display: flex;
+  flex-direction: row;
+  user-select: none;
+}
+
+.handle-buttons > *:nth-child(2){
+  margin-right: 4px;
+}
+
+.handle-buttons button {
+  background-color: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: black;
+  border-bottom-color: black;
+  box-shadow: inset -1.5px -1.5px #818181, inset 1.5px 1.5px #d0d0d0;
+}
+
+.window-content {
+  flex: 1; /* 👈 ocupa todo el espacio sobrante */
+  padding: 4  px;
+  background-color: white;
+  overflow: auto;
+  box-sizing: border-box;
+}

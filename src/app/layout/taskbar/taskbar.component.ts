@@ -14,6 +14,10 @@ export class TaskbarComponent {
     setInterval(() => this.updateTime(), 1000);
   }
 
+  ngOnInit() {
+    
+  }
+
   updateTime() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
