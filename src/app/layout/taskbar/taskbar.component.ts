@@ -18,6 +18,15 @@ export class TaskbarComponent {
     
   }
 
+  toggleMenu() {
+    const dropupContent = document.querySelector('.taskbar-dropup-content');
+    if (dropupContent?.hasAttribute('hidden')) {
+      dropupContent.removeAttribute('hidden');
+    } else {
+      dropupContent?.setAttribute('hidden', '');
+    }
+  }
+
   updateTime() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');

@@ -31,5 +31,19 @@
             <app-main-page></app-main-page>
         </section>
     </div>
-
+    <div id="secondary-page" class="window" cdkDrag display="none">
+        <header>
+            <div class="handle" cdkDragHandle>
+                <p class="window-title"><img src="assets/images/w98_logo.png" alt="">Bienvenido a mi Portafolio98</p>
+            </div>
+            <div class="handle-buttons">
+                <button (click)="minimizeWindow('secondary-page')">-</button>
+                <button (click)="maximizeWindow('secondary-page')">O</button>
+                <button (click)="closeWindow('secondary-page')">X</button>
+            </div>
+        </header>   
+        <section class="window-content">
+            <app-main-page></app-main-page>
+        </section>
+    </div>
 </section>

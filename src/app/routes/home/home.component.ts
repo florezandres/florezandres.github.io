@@ -6,14 +6,14 @@ import { b } from "../../../../node_modules/@angular/cdk/bidi-module.d-D-fEBKdS"
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, CdkDrag, CdkDragHandle, MainPageComponent, b],
+  imports: [CdkDrag, CdkDragHandle, MainPageComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
   mouseSound(){
     var audio = new Audio();
-    audio.src = "assets/sounds/mouse-click.mp3";
+    audio.src = "assets/sounds/mouse_clickAAA.mp3";
     audio.load();
     audio.play();
   }

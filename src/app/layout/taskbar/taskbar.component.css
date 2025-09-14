@@ -33,15 +33,31 @@
     border-right-color: black;
     border-bottom-color: black;
     padding: 1px 4px;
-    padding-left: 2px;
     cursor: pointer;
     box-sizing: border-box;
     box-shadow: inset -1.25px -1.25px 0px #818181, inset 1.25px 1.25px 0px #d0d0d0;
 }
 
+.windows-button:focus .button-content {
+    border: 1px dotted red;
+}
+
 .taskbar-logo {
     width: 21px;
     vertical-align: top;
+}
+
+.taskbar-dropup {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    transform: translateY(-100%);
+    background-color: #c0c0c0;
+    cursor: pointer;
+}
+
+.taskbar-dropup.hidden{
+    display: none;
 }
 
 .windows-button:active {

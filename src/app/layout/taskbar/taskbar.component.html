@@ -1,7 +1,10 @@
 <footer class="taskbar">
     <div class="tabs">
-        <button class="windows-button"><img class="taskbar-logo" src="assets/images/w98_logo.png" alt="taskbar logo">
-            <span>Inicio</span>
+        <button class="windows-button" (click)="toggleMenu()">
+            <div class="button-content">
+                <img class="taskbar-logo" src="assets/images/w98_logo.png" alt="taskbar logo">
+                <span>Inicio</span>
+            </div>
         </button>
         <div class="taskbar-dropup">
             <div class="taskbar-dropup-content" hidden>
