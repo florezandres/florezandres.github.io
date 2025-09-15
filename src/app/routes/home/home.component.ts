@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import {CdkDrag, CdkDragHandle} from '@angular/cdk/drag-drop';
 import { MainPageComponent } from '../../components/main-page/main-page.component';
 import { b } from "../../../../node_modules/@angular/cdk/bidi-module.d-D-fEBKdS";
+import { max } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,9 @@ import { b } from "../../../../node_modules/@angular/cdk/bidi-module.d-D-fEBKdS"
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  maximized = false;
+
   mouseSound(){
     var audio = new Audio();
     audio.src = "assets/sounds/mouse_clickAAA.mp3";
@@ -29,16 +33,29 @@ export class HomeComponent {
     }
   }
 
-  maximizeWindow(id: string) {
-    const window = document.getElementById(id);
-    if (window) {
-      window.style.position = 'fixed';
-      window.style.top = '0';
-      window.style.left = '0';
-      window.style.width = '100vw';
-      window.style.height = '100vh';
+lastTransform: string | null = null;
+
+maximizeWindow(id: string) {
+  const win = document.getElementById(id);
+  if (!win) return;
+
+  if (!this.maximized) {
+    // Guardar posición actual antes de maximizar
+    this.lastTransform = win.style.transform;
+
+    this.maximized = true;
+    win.classList.add('maximized');
+    win.style.transform = 'none'; // reset para que obedezca el CSS maximizado
+  } else {
+    // Restaurar posición guardada
+    this.maximized = false;
+    win.classList.remove('maximized');
+
+    if (this.lastTransform) {
+      win.style.transform = this.lastTransform;
     }
   }
+}
 
   closeWindow(id: string) {
     const window = document.getElementById(id);

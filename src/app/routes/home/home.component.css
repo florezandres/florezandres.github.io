@@ -1,3 +1,9 @@
+.home-container {
+  width: 500vh;
+  height: calc(100vh - var(--taskbar-height));
+  overflow: hidden;
+}
+
 .icon-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -40,7 +46,6 @@
     padding: 10px 20px;
 }
 
-
 .window {
   width: 600px;
   height: 400px;
@@ -60,6 +65,14 @@
   display: flex;
   flex-direction: column;
   padding: 3px;
+}
+
+.window.maximized {
+  position: absolute;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw;
+  height: calc(100vh - var(--taskbar-height) - 5px);
 }
 
 #secondary-page {
@@ -128,7 +141,6 @@
   flex: 1; /* 👈 ocupa todo el espacio sobrante */
   padding: 4  px;
   background-color: white;
-  overflow: auto;
   box-sizing: border-box;
 }
 
