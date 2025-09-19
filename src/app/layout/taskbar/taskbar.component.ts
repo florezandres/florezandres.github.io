@@ -9,13 +9,14 @@ import { Component } from '@angular/core';
 export class TaskbarComponent {
   time: string = '';
 
+  taskbarItem: any = [];
+
   constructor() {
     this.updateTime();
     setInterval(() => this.updateTime(), 1000);
   }
 
   ngOnInit() {
-    
   }
 
   toggleMenu() {

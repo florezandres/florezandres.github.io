@@ -15,17 +15,6 @@ export class HomeComponent {
 
   maximized = false;
 
-  mouseSound(){
-    var audio = new Audio();
-    audio.src = "assets/sounds/mouse_clickAAA.mp3";
-    audio.load();
-    audio.play();
-  }
-
-  ngOnInit(): void {
-    window.addEventListener('click', this.mouseSound, false);
-  }
-
   minimizeWindow(id: string) {
     const window = document.getElementById(id);
     if (window) {

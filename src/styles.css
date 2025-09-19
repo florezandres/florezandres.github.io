@@ -8,6 +8,8 @@
     --background: #008080;
 
     --taskbar-height: 28px;
+    --min-window-height: 500px;
+    --min-window-width: 700px;
 }
 
 body {
