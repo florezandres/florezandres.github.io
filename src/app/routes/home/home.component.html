@@ -16,34 +16,15 @@
             <p>Hoja de Vida</p>
         </a>
     </section>
-    <div id="main-page" class="window" cdkDragBoundary=".home-container" cdkDrag>
-        <header>
-            <div class="title-bar" cdkDragHandle>
-                <p class="window-title"><img src="assets/images/w98_logo.png" alt="">Bienvenido a mi Portafolio98</p>
-            </div>
-            <div class="title-bar-buttons">
-                <button (click)="minimizeWindow('main-page')"><img src="assets/images/minimize.png" alt=""></button>
-                <button (click)="maximizeWindow('main-page')">O</button>
-                <button (click)="closeWindow('main-page')">X</button>
-            </div>
-        </header>   
-        <section class="window-content">
-            <app-main-page></app-main-page>
-        </section>
-    </div>
-    <div id="secondary-page" class="window" cdkDrag display="none">
-        <header>
-            <div class="title-bar" cdkDragHandle>
-                <p class="window-title"><img src="assets/images/w98_logo.png" alt="">Bienvenido a mi Portafolio98</p>
-            </div>
-            <div class="title-bar-buttons">
-                <button (click)="minimizeWindow('secondary-page')">-</button>
-                <button (click)="maximizeWindow('secondary-page')">O</button>
-                <button (click)="closeWindow('secondary-page')">X</button>
-            </div>
-        </header>   
-        <section class="window-content">
-            <app-main-page></app-main-page>
-        </section>
-    </div>
+  <app-window
+    *ngFor="let win of windows"
+    cdkDragBoundary=".main-page"
+    [title]="win.title"
+    [windowId]="win.id"
+    (minimize)="minimizeWindow(win.id)"
+    (maximize)="maximizeWindow(win.id)"
+    (close)="closeWindow(win.id)"
+  >
+    <ng-container *ngComponentOutlet="win.component"></ng-container>
+  </app-window>
 </section>

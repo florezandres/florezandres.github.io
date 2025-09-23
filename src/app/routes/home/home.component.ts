@@ -1,19 +1,60 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import {CdkDrag, CdkDragHandle} from '@angular/cdk/drag-drop';
+import { Component, HostListener } from '@angular/core';
 import { MainPageComponent } from '../../components/main-page/main-page.component';
-import { b } from "../../../../node_modules/@angular/cdk/bidi-module.d-D-fEBKdS";
-import { max } from 'rxjs';
+import { CropYieldPredictionComponent } from "../../components/crop-yield-prediction/crop-yield-prediction.component";
+import { WindowComponent } from '../../components/window/window.component';
+import { CommonModule } from '@angular/common';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-home',
-  imports: [CdkDrag, CdkDragHandle, MainPageComponent],
+  imports: [WindowComponent, CommonModule, DragDropModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
 
+  mainPage = document.getElementById('main-page') as HTMLElement;
+  lastActiveWindow: boolean = true;
+  indexCounter = 2;
   maximized = false;
+
+  windows = [
+  { 
+    id: 'main-page', 
+    title: 'Bienvenido a mi Portafolio98', 
+    component: MainPageComponent 
+  },
+  { 
+    id: 'secondary-page',
+    title: 'Predicción de Cultivos',
+    component: CropYieldPredictionComponent 
+  },
+];
+
+
+
+  ngOnInit() {
+    document.getElementById('main-page')?.classList.add('active'); 
+    //this.mainPage.style.zIndex = String(this.indexCounter);
+  }
+  
+  @HostListener('click', ['$event'])
+  activeWindow(event: Event) {
+    const target = event.target as HTMLElement;
+    const windowParent = target.closest('.window') as HTMLElement;
+    if (windowParent) {
+      if (this.lastActiveWindow) {
+        const oldWindowParent = document.querySelector('.window.active') as HTMLElement;
+        if (oldWindowParent) {
+          oldWindowParent.classList.remove('active');
+          oldWindowParent.style.zIndex = String(this.indexCounter-1);
+        }
+      }
+      windowParent.classList.add('active');
+      windowParent.style.zIndex = String(this.indexCounter);
+      this.lastActiveWindow = true;
+    }
+  }
 
   minimizeWindow(id: string) {
     const window = document.getElementById(id);
@@ -22,29 +63,30 @@ export class HomeComponent {
     }
   }
 
-lastTransform: string | null = null;
+  lastTransform: string | null = null;
 
-maximizeWindow(id: string) {
-  const win = document.getElementById(id);
-  if (!win) return;
+  maximizeWindow(id: string) {
+    console.log(id);
+    const win = document.getElementById(id);
+    if (!win) return;
 
-  if (!this.maximized) {
-    // Guardar posición actual antes de maximizar
-    this.lastTransform = win.style.transform;
+    if (!this.maximized) {
+      // Guardar posición actual antes de maximizar
+      this.lastTransform = win.style.transform;
 
-    this.maximized = true;
-    win.classList.add('maximized');
-    win.style.transform = 'none'; // reset para que obedezca el CSS maximizado
-  } else {
-    // Restaurar posición guardada
-    this.maximized = false;
-    win.classList.remove('maximized');
+      this.maximized = true;
+      win.classList.add('maximized');
+      win.style.transform = 'none'; // reset para que obedezca el CSS maximizado
+    } else {
+      // Restaurar posición guardada
+      this.maximized = false;
+      win.classList.remove('maximized');
 
-    if (this.lastTransform) {
-      win.style.transform = this.lastTransform;
+      if (this.lastTransform) {
+        win.style.transform = this.lastTransform;
+      }
     }
   }
-}
 
   closeWindow(id: string) {
     const window = document.getElementById(id);

@@ -11,7 +11,7 @@ import { TaskbarComponent } from './layout/taskbar/taskbar.component';
 export class AppComponent {
   title = 'portafolio';
 
-  private audio = new Audio('assets/sounds/click.mp3');
+  private audio = new Audio('assets/sounds/mouse_click.mp3');
 
   constructor() {
     this.audio.load();
@@ -29,5 +29,22 @@ export class AppComponent {
       this.audio.play();
     }
   }
+
+
+  /*
+  lastActiveWindow: HTMLElement | null = null;
+
+  @HostListener('document:click', ['$event'])
+  activeWindow(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    if (target.classList.contains('window')) {
+      if (this.lastActiveWindow) {
+        this.lastActiveWindow.classList.remove('active');
+      }
+      target.classList.add('active');
+      this.lastActiveWindow = target;
+    }
+  }
+    */
 }
 

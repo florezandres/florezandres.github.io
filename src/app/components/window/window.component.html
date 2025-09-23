@@ -1,0 +1,20 @@
+<div class="window" [id]="windowId" cdkDrag [cdkDragRootElement]="'.window'">
+  <header>
+    <div class="title-bar" cdkDragHandle>
+      <p class="window-title">
+        <img src="assets/images/w98_logo.png" alt="">
+        {{ title }}
+      </p>
+    </div>
+    <div class="title-bar-buttons">
+      <button (click)="minimizeWindow()">
+        <img src="assets/images/MinimizeLogo.png" alt="">
+      </button>
+      <button (click)="maximizeWindow()">O</button>
+      <button (click)="closeWindow()">X</button>
+    </div>
+  </header>
+  <section class="window-content">
+    <ng-content></ng-content>
+  </section>
+</div>

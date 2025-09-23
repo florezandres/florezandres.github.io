@@ -24,3 +24,49 @@ html, body {
     height: 100%;
     overflow-x: hidden;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: conic-gradient(
+        var(--white) 90deg,
+        var(--light-grey) 90deg 180deg,
+        var(--white) 180deg 270deg,
+        var(--light-grey) 270deg
+    );
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: 3px 3px;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: black;
+  border-bottom-color: black;
+  box-shadow: inset -1.5px -1.5px #818181, inset 1.5px 1.5px #d0d0d0; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:focus {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:active {
+  border: 2px solid black;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  box-shadow: inset 1.25px 1.25px 0px #818181, inset -1.25px -1.25px 0px #d0d0d0;
+  cursor: grabbing;
+}
