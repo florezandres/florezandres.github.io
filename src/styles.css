@@ -8,8 +8,8 @@
     --background: #008080;
 
     --taskbar-height: 28px;
-    --min-window-height: 500px;
-    --min-window-width: 700px;
+    --min-window-height: 540px;
+    --min-window-width: 740px;
 }
 
 body {
@@ -69,4 +69,75 @@ html, body {
   border-bottom-color: #fff;
   box-shadow: inset 1.25px 1.25px 0px #818181, inset -1.25px -1.25px 0px #d0d0d0;
   cursor: grabbing;
+}
+
+/* Arrows */
+::-webkit-scrollbar-button {
+    display: block;
+    width: 20px;
+    height: 5px;
+}
+
+/* Estilo normal para tus botones de flecha */
+::-webkit-scrollbar-button:vertical {
+  width: 20px;
+  height: 20px;
+  background-image: url("assets/images/arrow_up.png");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--light-grey);
+  border: 2px solid #fff;
+  border-left-color: var(--light-grey);
+  border-right-color: black;
+  border-bottom-color: black;
+  box-shadow: inset -1.5px -1.5px #818181, inset 1.5px 1.5px #d0d0d0;
+}
+
+/* === SCROLLBAR VERTICAL === */
+
+/* Botón flecha ARRIBA */
+::-webkit-scrollbar-button:vertical:increment {
+  /* Esta pseudo es "scroll down" pero Chrome la pone arriba */
+  background-image: url("assets/images/arrow_up.png");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--light-grey);
+  border: 2px solid #fff;
+  border-left-color: var(--light-grey);
+  border-right-color: black;
+  border-bottom-color: black;
+  box-shadow: inset -1.5px -1.5px #818181, inset 1.5px 1.5px #d0d0d0;
+}
+
+/* Botón flecha ABAJO */
+::-webkit-scrollbar-button:vertical:decrement {
+  /* Esta pseudo es "scroll up" pero Chrome la pone abajo */
+  background-image: url("assets/images/arrow_down.png");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--light-grey);
+  border: 2px solid #fff;
+  border-left-color: var(--light-grey);
+  border-right-color: black;
+  border-bottom-color: black;
+  box-shadow: inset -1.5px -1.5px #818181, inset 1.5px 1.5px #d0d0d0;
+}
+
+
+/* ELIMINA el “espaciador” */
+::-webkit-scrollbar-button:single-button {
+  display: none;         /* lo quita del todo */
+  width: 0 !important;
+  height: 0 !important;
+  background: none !important;
+}
+
+
+::-webkit-scrollbar-button:horizontal {
+    background-image: url("assets/images/arrow_down.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }

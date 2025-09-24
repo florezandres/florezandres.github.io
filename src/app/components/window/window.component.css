@@ -16,7 +16,7 @@
   max-height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 3px;
+  padding: 4px;
 }
 
 .window.active {
@@ -38,6 +38,10 @@
 #secondary-page {
   top: calc(40% - 200px - var(--taskbar-height));
   left: calc(40% - 300px);
+}
+
+#crop-yield-prediction {
+  display: none;
 }
 
 .window-title {
@@ -111,11 +115,19 @@
 }
 
 .window-content {
+  margin-top: 3px;
   flex: 1; /* 👈 ocupa todo el espacio sobrante */
   background-color: white;
   box-sizing: border-box;
   max-width: 100%;
-  max-height: calc(100% - 32px);
+  max-height: calc(100% - 30px);
+  margin-left: 3px;
+  margin-right: 0.5px;
+  border-right: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+  border-top: 2px solid var(--grey);
+  border-left: 2px solid var(--grey);
+  box-shadow: inset -2px -2px var(--lighter-grey), inset 1.5px 1.5px black;
 }
 
 @media (max-width: 768px) {

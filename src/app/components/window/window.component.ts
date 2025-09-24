@@ -29,45 +29,11 @@ export class WindowComponent {
   //@HostBinding('attr.id') get id() { return this.windowId; }
 
   minimizeWindow() { this.minimize.emit(); }
-  maximizeWindow() { this.maximize.emit(); }
+  maximizeWindow() { this.maximize.emit(); 
+    const img = document.getElementById('restore-button')?.querySelector('img');
+    if (img) {
+      img.src = 'assets/images/restore.png';
+    }
+  }
   closeWindow() { this.close.emit(); }
-  /*
-  minimizeWindow() {
-    const window = document.getElementById();
-    if (window) {
-      window.style.display = 'none';
-    }
-  }
-
-  lastTransform: string | null = null;
-
-  maximizeWindow() {
-    const win = document.getElementById(id);
-    if (!win) return;
-
-    if (!this.maximized) {
-      // Guardar posición actual antes de maximizar
-      this.lastTransform = win.style.transform;
-
-      this.maximized = true;
-      win.classList.add('maximized');
-      win.style.transform = 'none'; // reset para que obedezca el CSS maximizado
-    } else {
-      // Restaurar posición guardada
-      this.maximized = false;
-      win.classList.remove('maximized');
-
-      if (this.lastTransform) {
-        win.style.transform = this.lastTransform;
-      }
-    }
-  }
-
-  closeWindow(id: string) {
-    const window = document.getElementById(id);
-    if (window) {
-      window.remove();
-    }
-  }
-*/
 }

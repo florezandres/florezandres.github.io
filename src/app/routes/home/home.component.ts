@@ -25,10 +25,10 @@ export class HomeComponent {
     component: MainPageComponent 
   },
   { 
-    id: 'secondary-page',
-    title: 'Predicción de Cultivos',
+    id: 'crop-yield-prediction', 
+    title: 'Predicción de rendimiento de cultivo', 
     component: CropYieldPredictionComponent 
-  },
+  }
 ];
 
 
