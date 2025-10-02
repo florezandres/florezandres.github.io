@@ -15,6 +15,10 @@ export class WindowComponent {
 
   ngOnInit() {
     document.getElementById('main-page')?.classList.add('active'); 
+    const element = document.getElementById('main-page');
+    if (element) {
+       element.classList.add('active');
+    }
   }
   
   @Input() title: string = '';

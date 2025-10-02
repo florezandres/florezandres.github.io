@@ -21,22 +21,16 @@ export class HomeComponent {
   windows = [
   { 
     id: 'main-page', 
-    title: 'Bienvenido a mi Portafolio98', 
+    title: 'Welcome to my Portafolio98!', 
     component: MainPageComponent 
-  },
+  }
+  ,
   { 
     id: 'crop-yield-prediction', 
     title: 'Predicción de rendimiento de cultivo', 
     component: CropYieldPredictionComponent 
   }
 ];
-
-
-
-  ngOnInit() {
-    document.getElementById('main-page')?.classList.add('active'); 
-    //this.mainPage.style.zIndex = String(this.indexCounter);
-  }
   
   @HostListener('click', ['$event'])
   activeWindow(event: Event) {
@@ -95,3 +89,4 @@ export class HomeComponent {
     }
   }
 }
+

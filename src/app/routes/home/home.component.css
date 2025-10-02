@@ -1,5 +1,5 @@
 .home-container {
-  height: calc(100vh - var(--taskbar-height));
+  height: calc(100vh - (var(--taskbar-height) + 6px));
   overflow: hidden;
   position: relative;
 }
@@ -46,74 +46,6 @@
     padding: 10px 20px;
 }
 
-.window {
-  width: var(--min-window-width);
-  height: var(--min-window-height);
-  background-color: #c0c0c0;
-  border: 2px solid #fff;
-  border-right-color: black;
-  border-bottom-color: black;
-  box-shadow: inset -2px -2px #818181, inset 2px 2px #d0d0d0;
-  box-sizing: border-box;
-  position: absolute;
-  top: calc(50% - (var(--min-window-height)/2) - var(--taskbar-height));
-  left: calc(50% - (var(--min-window-width)/2));
-  min-width: 200px;
-  min-height: 100px;
-  max-width: 100%;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 3px;
-}
-
-.window.active {
-  z-index: 2;
-}
-
-.window.active header {
-  background: linear-gradient(to right, #000080, #1d81c6);
-}
-
-.window.maximized {
-  position: absolute;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100vw;
-  height: calc(100vh - var(--taskbar-height) - 5px);
-}
-
-#secondary-page {
-  top: calc(40% - 200px - var(--taskbar-height));
-  left: calc(40% - 300px);
-}
-
-.window-title {
-  height: 20px;
-  position: sticky;
-  margin: 0;
-  padding: 2px 5px;
-  color: white;
-  font-family: 'Windows 98';
-  font-size: 17px;
-  font-weight: bold;
-  letter-spacing: 1.25px;
-  display: flex;
-  align-items: center;
-  user-select: none;
-  cursor: grab;
-}
-
-.window-title:active {
-  cursor: grabbing;
-}
-
-.window header {
-  background: linear-gradient(to right, var(--grey), var(--light-grey));
-  border-bottom: 2px solid var(--light-grey);
-  display: flex;
-  flex-direction: row;
-}
 .title-bar {
   width: 100%;
 }
@@ -155,18 +87,5 @@
   width: 20px;
 }
 
-.window-content {
-  flex: 1; /* 👈 ocupa todo el espacio sobrante */
-  background-color: white;
-  box-sizing: border-box;
-  max-width: 100%;
-  max-height: calc(100% - 32px);
-}
-
 @media (max-width: 768px) {
-  .window {
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
 }

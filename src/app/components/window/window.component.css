@@ -35,15 +35,6 @@
   height: calc((100vh - var(--taskbar-height)));
 }
 
-#secondary-page {
-  top: calc(40% - 200px - var(--taskbar-height));
-  left: calc(40% - 300px);
-}
-
-#crop-yield-prediction {
-  display: none;
-}
-
 .window-title {
   height: 20px;
   position: sticky;
@@ -87,6 +78,7 @@
 
 .title-bar-buttons {
   margin: 3px 3px;
+  margin-right: 4.5px;
   display: flex;
   flex-direction: row;
 }
@@ -121,13 +113,20 @@
   box-sizing: border-box;
   max-width: 100%;
   max-height: calc(100% - 30px);
-  margin-left: 3px;
+  margin-left: 0px;
   margin-right: 0.5px;
   border-right: 2px solid var(--white);
   border-bottom: 2px solid var(--white);
   border-top: 2px solid var(--grey);
   border-left: 2px solid var(--grey);
   box-shadow: inset -2px -2px var(--lighter-grey), inset 1.5px 1.5px black;
+}
+
+#crop-yield-prediction {
+  position: absolute;
+  top: calc(45% - (var(--min-window-height)/2) - var(--taskbar-height));
+  left: calc(45% - (var(--min-window-width)/2));
+  display: none;
 }
 
 @media (max-width: 768px) {
