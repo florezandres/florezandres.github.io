@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    padding: 25px 25px;
+    padding-left: var(--general-padding);
+    padding-right: var(--general-padding);
+}
+
