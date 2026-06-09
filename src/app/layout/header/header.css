@@ -1,6 +1,113 @@
 #header {
-    width: 800px;
-    height: 30px;
+    width: 100vw;
+    height: 80px;
     margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
 }
+
+.window {  
+  font: 9pt "Segoe UI", "SegoeUI", "Noto Sans", sans-serif;  
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 1);  
+  border: 1px solid rgba(0, 0, 0, 0.7);  
+  border-radius: 6px;  
+  position: relative;  
+  z-index: 0;  
+}  
+  
+.window::before {  
+  content: "";  
+  position: absolute;  
+  z-index: -1;  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  height: 100%;  
+  border-radius: 6px;  
+  background: linear-gradient(transparent 20%, rgba(255, 255, 255, 0.7) 40%, transparent 41%),  
+    linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2)),  
+    #4580c4;  
+  background-color: #4580c4;  
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.99);  
+}  
+  
+.window.glass::before {  
+  opacity: 0.6;  
+}  
+  
+.window.glass::after {  
+  content: "";  
+  position: absolute;  
+  z-index: -10;  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  height: 100%;  
+  border-radius: 6px;  
+  border: none;  
+  backdrop-filter: blur(4px);  
+}  
+  
+.title-bar {  
+  font: 9pt "Segoe UI", "SegoeUI", "Noto Sans", sans-serif;  
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);  
+  border: 1px solid rgba(0, 0, 0, 0.7);  
+  border-radius: 6px 6px 0 0;  
+  padding: 6px;  
+  padding-top: 0;  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2)),  
+    #4580c4;  
+  background-color: #4580c4;  
+}  
+  
+.title-bar-text {  
+  color: #000;  
+  letter-spacing: 0;  
+  line-height: 15px;  
+  padding-top: 6px;  
+  text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff,  
+    0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;  
+}  
+  
+.title-bar-controls {  
+  display: flex;  
+  background: rgba(255, 255, 255, 0.19);  
+  border: 1px solid rgba(0, 0, 0, 0.3);  
+  border-top: 0;  
+  border-radius: 0 0 5px 5px;  
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.98), 1px 0 0 rgba(255, 255, 255, 0.98), -1px 0 0 rgba(255, 255, 255, 0.98);  
+}
+
+header {
+  width: 100vw;
+  height: 3rem;
+
+  /* El gradiente de franjas */
+  background-image:
+    linear-gradient(135deg, #fff5 70px, transparent 100px),
+    linear-gradient(225deg, #fff5 70px, transparent 100px),
+    linear-gradient(
+      54deg,
+      #0002 0 4%, #6661 6% 6%, #0002 8% 10%,
+      #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%,
+      #bbb2 25% 26%, #0002 31% 33%,
+      #0002 34% 34.5%, #bbb2 36% 40%,
+      #0002 41% 41.5%, #bbb2 44% 45%,
+      #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%,
+      #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%,
+      rgba(187, 187, 187, 0) 69.5% 70%, rgba(0, 0, 0, 0) 73.5% 74%,
+      #bbb2 74.5% 79%, #0002 80% 84%,
+      #aaa2 85% 86%, #0002 87%, #bbb1 90%
+    );
+  background-size: auto, auto, 100vw 100vh;
+  background-attachment: fixed;
+  border: none;
+  position: absolute;
+  /* single bottom border: black with a thin white accent above */
+  border-bottom: 0.8px solid rgba(0, 0, 0, 0.671);
+  background-color: #3e83a380;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.40);
+  box-shadow: 2px 2px 10px 1px var(--w7-w-bd),inset 0 0 0 1px #fffa
+}
+

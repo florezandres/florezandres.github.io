@@ -1,7 +1,17 @@
 .content { 
-    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
+    padding-top: 8rem;
+}
+.spinner {
+    animation:spin 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); 
+    }
+    100% { transform: rotate(360deg); 
+    }
 }
 
 .basic-info {
@@ -15,33 +25,52 @@
     justify-content: end;
 }
 
+.title-bar:hover {
+    cursor: grab;
+}
+
 #pfp {
     height: auto;
     width: 11rem;
-    image-rendering: pixelated;
+}
+
+#pfp-container {
+    animation: fadeIn 1s ease-in-out;
+}
+    
+.window-body {
+    background-color: rgb(255, 255, 255);
 }
 
 .basic-info-text {
     margin-left: 20px;
 }
 
+.basic-info-text img {
+    margin-right: 0.4rem;
+    vertical-align: middle;
+}
+
 .basic-info-text h1,
 .basic-info-text h2,
 .basic-info-text h3,
 .basic-info-text h4 {
-    text-shadow: 3px 3px 5px rgba(255, 255, 255, 1);
+    text-shadow: 3px 3px 5px rgb(0, 0, 0);
     color: #ffffff;
 }
 
 .basic-info-text h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
     font-size: 3.5em;
     font-weight: 600;
-    margin: 0;
     font-family: 'Alvera Bold Circle', sans-serif;
 }
 
 .basic-info-text h3 {
-    font-size: 2rem;
+    padding-top: 0.25rem;
+    font-size: 1.67rem;
     font-weight: 400;
     margin: 0;
     padding-bottom: 10px;
@@ -49,21 +78,16 @@
 }
 
 .basic-info-text h4 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
     margin: 0;
     padding-bottom: 10px;
     font-family: 'Alvera Regular Circle', sans-serif;
 }
 
-.dotted-line {
-  border: 0;
-  border-top: 3px dotted #ffffff;
-  margin-top: 0.5rem;
-  margin-bottom: 0.8rem;
-  margin-left: 0.2rem;
-  width: 46%;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+.basic-info-text h3,
+.basic-info-text h4 {
+    margin-left: 0.85rem;
 }
 
 .svg-basic-info {
@@ -76,54 +100,99 @@
     height: 1.5rem;
 }
 
-.overlay { 
-    position: fixed; 
-    bottom: 0; 
-    right: 0; 
-}
 
 /*Bits*/
 
 .bits {
-    padding-top: 5rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 3.5rem;
+    border-radius: 5px;
+    animation: fadeIn 0.67s ease-in-out;
 }
 
 .bit {
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
-    text-decoration: wavy underline 2px #fff;
-    transition: all 0.5s ease;
-    width: 100%;
-    border: 2px solid #fff;
-    padding-left: 0.5rem;
-}
-
-.bit:hover {
-    color: #00ffd5;
-    text-decoration: wavy underline 2px #00ffd5;
-    border: 2px solid #00ffd5;
-    transform: scale(1.05);
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.bit:hover h3 {
-    transform: scale(1.05);
-    transition: all 0.2s ease;
+    height: 50px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .bit img {
-    height: 40px;
+    height: 25px;
     vertical-align: middle;
     margin-right: 10px;
 }
 
-.bit h3 {
+.bit a {
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Alvera Regular Circle', sans-serif;
+    font-size: 1.25rem;
+    color: #0059ff;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.bits .background {
+    width: 100%;
+}
+
+/*About section*/
+#about-me {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-shadow: 3px 3px 5px rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+#dialog-about {
+    width: calc(100vw - var(--general-padding) * 2);
+    display: flex;
+    flex-direction: column;
     padding: 0;
-    margin: 0.5rem;
+}
+
+#dialog-about .window-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+@keyframes fadeIn {
+    from { 
+        transform: translateY(-20px);
+        opacity: 0.33; 
+    }
+    to { 
+        transform: translateY(0);
+        opacity: 1; 
+    }
+}
+
+/*Loading screen*/
+.overlay { 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    position: fixed; 
+    z-index: 10000;
+    inset: 0;
 }

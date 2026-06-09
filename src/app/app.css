@@ -4,8 +4,8 @@ body {
 }
 
 #content {
-    padding: 25px 25px;
     padding-left: var(--general-padding);
     padding-right: var(--general-padding);
+    background-color: #00000015;
+    height: 100vh;
 }
-

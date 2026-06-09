@@ -6,7 +6,7 @@ html, body {
 }
 
 :root {
-    --general-padding: 7rem;
+    --general-padding: 10rem;
 }
 
 @font-face {
@@ -27,7 +27,7 @@ html, body {
 
 body {
   font-family: 'Alvera Regular Circle', sans-serif;
-  background-image: url('/assets/images/background.webp');
+  background-image: url('/assets/images/background3.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

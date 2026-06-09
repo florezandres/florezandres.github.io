@@ -1,3 +1,9 @@
+@if (isLoading()) {
+<div class="overlay" aria-live="polite" aria-busy="true">
+    <span class="spinner" aria-label="Spinning"></span>
+    <p style="color: white; margin-left: 0.4rem;">{{ currentMessage() }}{{ dots() }}</p>
+</div>
+} @else {
 <div class="content">
     <section class="basic-info">
         <div id="pfp-container" class="background">
@@ -10,36 +16,32 @@
                     </div>
                 </div>
                 <div class="window-body has-space">
-                    <img id="pfp" src="/assets/images/pfp.jpg" alt="Profile Picture">
+                    <img id="pfp" src="/assets/images/pfp3.jpg" alt="Profile Picture">
                 </div>
             </div>
         </div>
         <div class="basic-info-text">
-            <h2>Andres Felipe Florez Buitrago</h2>
-            <div class="dotted-line"></div>
-                <h3><img class="svg-basic-info" src="/assets/svg/gcloud.svg" alt="Cloud Icon">Automation and IT Operations Engineer<!--Cloud OPS Engineer!--></h3>
-                <h4><img class="svg-basic-info" src="/assets/svg/location.svg" alt="Location Icon">Avianca - ITSM and Operations</h4>
+            <h2>Andres Felipe Florez</h2>
+            <h3><img class="svg-basic-info" src="/assets/icons/oobefldr_109.ico" alt="Cloud Icon">Automation and IT Operations Engineer<!--Cloud OPS Engineer!--></h3>
+            <h4><img class="svg-basic-info" src="/assets/icons/location.ico" alt="Location Icon">Bogota D.C., Colombia</h4>
         </div>
     </section>
     <!--
     <section class="bits">
-        <div hidden class="background" style="background-color: transparent;">
-            <div class="window glass active">
+        <div hidden class="background">
+            <div class="window glass active" >
                 <div class="title-bar">
                     <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
                     </div>
                 </div>
-                <div class="window-body has-space">
-                    <p>About me</p>
+                <div class="window-body has-space" style="background-color: transparent;">
+                    <div class="bit" style="border: none;">
+                        <h3><img src="/assets/icons/about.ico" alt="about icon">About Me</h3>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>-->
-    <section class="bits">
-        <div class="bit">
+        <div class="bit" (click)="navAbout()">
             <h3><img src="/assets/icons/about.ico" alt="about icon">About Me</h3>
         </div>
         <div class="bit">
@@ -51,8 +53,144 @@
         <div class="bit">
             <h3><img src="/assets/icons/contact.ico" alt="contact icon">Contact</h3>
         </div>
+    </section>-->
+    <section class="bits">
+        <div class="background">
+            <div class="window glass active" cdkDrag>
+                <div class="title-bar" cdkDragHandle>
+                    <div class="title-bar-controls">
+                        <button aria-label="Help"></button>
+                        <button aria-label="Minimize"></button>
+                    </div>
+                </div>
+                <div class="window-body has-space">
+                    <div class="bit" style="border: none;">
+                        <a class="link" href="#dialog-about"><img src="/assets/icons/about.ico" alt="about icon">About Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background">
+            <div class="window glass active" cdkDrag>
+                <div class="title-bar" cdkDragHandle>
+                    <div class="title-bar-controls">
+                        <button aria-label="Help"></button>
+                        <button aria-label="Minimize"></button>
+                    </div>
+                </div>
+                <div class="window-body has-space">
+                    <div class="bit" style="border: none;">
+                        <a class="link" href="#dialog-skills"><img src="/assets/icons/skills.ico" alt="skills icon">Skills</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background">
+            <div class="window glass active" cdkDrag>
+                <div class="title-bar" cdkDragHandle>
+                    <div class="title-bar-controls">
+                        <button aria-label="Help"></button>
+                        <button aria-label="Minimize"></button>
+                    </div>
+                </div>
+                <div class="window-body has-space">
+                    <div class="bit" style="border: none;">
+                        <a class="link" href="#dialog-projects"><img src="/assets/icons/projects.ico" alt="projects icon">Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background">
+            <div class="window glass active" cdkDrag>
+                <div class="title-bar" cdkDragHandle>
+                    <div class="title-bar-controls">
+                        <button aria-label="Help"></button>
+                        <button aria-label="Minimize"></button>
+                    </div>
+                </div>
+                <div class="window-body has-space">
+                    <div class="bit" style="border: none;">
+                        <a class="link" href="#dialog-contact"><img src="/assets/icons/contact.ico" alt="contact icon">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialog for About Me -->
+        <div class="window glass active" id="dialog-about" role="dialog" aria-labelledby="dialog-title">
+            <div class="title-bar">
+                <div class="title-bar-text" id="dialog-title">About Me</div>
+                <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Close" onclick="history.back()"></button>
+                </div>
+            </div>
+            <div class="window-body has-space">
+                <p>Welcome to my portfolio! I am an Automation and IT Operations Engineer.</p>
+                <p>I have a strong background in automation and IT operations, with experience in cloud technologies and system administration.</p>
+            </div>
+            <footer hidden style="text-align: right">
+                <button onclick="history.back()">Cancel</button>
+            </footer>
+        </div>
+        <!-- Dialog for Skills -->
+        <div class="window glass active" id="dialog-skills" role="dialog"aria-labelledby="dialog-title-skills">
+            <div class="title-bar">
+                <div class="title-bar-text" id="dialog-title-skills">Skills</div>
+                <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Close" onclick="history.back()"></button>
+                </div>
+            </div>
+            <div class="window-body has-space">
+                <p>Here are some of my key skills:</p>
+                <ul>
+                    <li>Automation: Proficient in scripting languages such as Python and Bash, with experience in tools like Ansible and Terraform.</li>
+                    <li>Cloud Technologies: Experienced with AWS, Azure, and Google Cloud Platform for deploying and managing cloud infrastructure.</li>
+                    <li>IT Operations: Skilled in monitoring, incident management, and IT service management (ITSM) practices.</li>
+                    <li>System Administration: Strong background in Linux and Windows server administration.</li>
+                </ul>
+            </div>
+            <footer hidden style="text-align: right">
+                <button onclick="history.back()">Cancel</button>
+            </footer>
+        </div>
+        <!-- Dialog for Projects -->
+        <div class="window glass active" id="dialog-projects" role="dialog" aria-labelledby="dialog-title-projects">
+            <div class="title-bar">
+                <div class="title-bar-text" id="dialog-title-projects">Projects</div>
+                <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Close" onclick="history.back()"></button>
+                </div>
+            </div>
+            <div class="window-body has-space">
+                <p>Here are some of my recent projects:</p>
+            </div>
+            <footer hidden style="text-align: right">
+                <button onclick="history.back()">Cancel</button>
+            </footer>
+        </div>
+        <!-- Dialog for Contact -->
+        <div class="window glass active" id="dialog-contact" role="dialog" aria-labelledby="dialog-title-contact">
+            <div class="title-bar">
+                <div class="title-bar-text" id="dialog-title-contact">Contact</div>
+                <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Close" onclick="history.back()"></button>
+                </div>
+            </div>
+            <div class="window-body has-space">
+                <p>You can contact me through the following channels:</p>
+                <ul>
+                    <li>Email: <a href="mailto:example@email.com">example@email.com</a></li>
+                    <li>LinkedIn: <a href="https://linkedin.com/in/example" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+                </ul>
+            </div>
+            <footer hidden style="text-align: right">
+                <button onclick="history.back()">Cancel</button>
+            </footer>
+        </div>
     </section>
 </div>
-<div class="overlay">
-    <div>Clima</div>
-</div>
+}
