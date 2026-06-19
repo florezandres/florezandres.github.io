@@ -199,12 +199,6 @@ a:hover {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    height: 200px;
-}
-
-#dialog-body-about {}
-
-#dialog-about .window-body p {
 }
 
 @keyframes fadeIn {
@@ -216,6 +210,198 @@ a:hover {
         transform: translateY(0);
         opacity: 1; 
     }
+}
+
+/* About dialog */
+#dialog-body-about {
+  padding-bottom: 0;
+}
+
+#dialog-body-about fieldset {
+  margin-bottom: 8px;
+}
+
+.about-para {
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.about-para:last-child {
+  margin-bottom: 0;
+}
+
+.about-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.about-contact-item {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 8px;
+  border: 1px solid #c0c0c0;
+  border-bottom-color: #888;
+  border-right-color: #888;
+  background: linear-gradient(to bottom, #f0f0f0, #dcdcdc);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  color: inherit;
+}
+
+.about-contact-item:hover {
+  background: linear-gradient(to bottom, #dce8fc, #c8d8f8);
+  border-color: #316ac5;
+}
+
+.about-contact-label {
+  font-size: 9px;
+  opacity: 0.65;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1px;
+}
+
+.about-contact-value {
+  font-size: 11px;
+  color: #316ac5;
+}
+
+/* Experience dialog */
+#dialog-body-experience {
+  padding-bottom: 0;
+}
+
+#dialog-body-experience fieldset {
+  margin-bottom: 8px;
+}
+
+.exp-company-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.exp-title {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.exp-company {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.exp-date-badge {
+  display: inline-block;
+  background: linear-gradient(to bottom, #3d7bd4, #2160b8);
+  color: #fff;
+  font-size: 10px;
+  padding: 1px 8px;
+  margin-bottom: 10px;
+  border: 1px solid #1a3f8a;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3),
+              inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.exp-date-badge--past {
+  background: linear-gradient(to bottom, #5a5a9a, #3a3a7a);
+  border-color: #2a2a6a;
+}
+
+.exp-desc {
+  font-size: 11px;
+  margin: 0 0 4px;
+  line-height: 1.5;
+  padding-left: 12px;
+  position: relative;
+}
+
+.exp-desc::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: #316ac5;
+  font-weight: 700;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #c0c0c0;
+}
+
+.exp-tag {
+  font-size: 10px;
+  background: linear-gradient(to bottom, #f0f0f0, #dcdcdc);
+  border: 1px solid #a8a8a8;
+  border-bottom-color: #888;
+  border-right-color: #888;
+  padding: 1px 7px;
+  color: #222;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.exp-divider {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 14px 0 12px;
+}
+
+.exp-divider hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #c0c0c0;
+}
+
+.exp-statusbar {
+  display: flex;
+  gap: 2px;
+  margin-top: 8px;
+  border-top: 2px groove #c0c0c0;
+  padding: 4px 0 2px;
+  justify-content: flex-end;
+}
+
+.exp-statusbar-cell {
+  font-size: 10px;
+  padding: 1px 8px;
+  border: 1px inset #c0c0c0;
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Skills dialog */
+#dialog-body-skills {
+  padding-bottom: 0;
+}
+
+#dialog-body-skills fieldset {
+  margin-bottom: 8px;
+}
+
+/* Projects dialog */
+#dialog-body-projects {
+  padding-bottom: 0;
+}
+
+#dialog-body-projects fieldset {
+  margin-bottom: 8px;
+}
+
+/* Cert tag variant */
+.exp-tag--cert {
+  background: linear-gradient(to bottom, #e8f0fe, #d0e0f8);
+  border-color: #7aa0d4;
+  border-bottom-color: #4a78b8;
+  border-right-color: #4a78b8;
+  color: #1a3f8a;
 }
 
 /*Loading screen*/
