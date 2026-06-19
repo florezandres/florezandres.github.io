@@ -3,10 +3,13 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
+  overflow: hidden;
 }
 
 :root {
-    --general-padding: 10rem;
+    --general-padding: 12.5rem;
+    --border-radius: 5px;
+    --internal-border-radius: 3px;
 }
 
 @font-face {
@@ -26,11 +29,20 @@ html, body {
 }
 
 body {
+  font-family: 'Doto', times;
+}
+
+/*
+body {
   font-family: 'Alvera Regular Circle', sans-serif;
-  background-image: url('/assets/images/background3.jpg');
+}
+
+body {
+  font-family: 'Alvera Regular Circle', sans-serif;
+  background-image: url('/assets/images/vid1337.webm');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
+*/

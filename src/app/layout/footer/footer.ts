@@ -11,10 +11,10 @@ export class Footer {
     // show taskbar with id+taskbar
     const taskbar = document.getElementById('taskbar-menu');
     if (taskbar) {
-      if (taskbar.style.display === 'block') {
+      if (taskbar.style.display === 'flex') {
         taskbar.style.display = 'none';
       } else {
-        taskbar.style.display = 'block';
+        taskbar.style.display = 'flex';
       }
     }
   }
@@ -36,11 +36,6 @@ export class Footer {
     setInterval(() => {
       this.currentTime = new Date();
     }, 1000);
-  }
-
-  changeLanguage(lang: string) {
-    // Implement language change logic here
-    console.log(`Language changed to: ${lang}`);
   }
 
   ngOnInit() {
@@ -70,5 +65,15 @@ export class Footer {
         languagetooltip.classList.add('hiding');
       }, 12000);
     }
+  }
+
+  
+  changeLanguage(lang: string) {
+    // Implement language change logic here
+    console.log(`Language changed to: ${lang}`);
+  }
+
+  toggleTheme() {
+
   }
 }

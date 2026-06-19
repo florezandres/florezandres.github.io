@@ -1,5 +1,5 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit, signal } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { Header } from './layout/header/header';
 import { Footer } from './layout/footer/footer';
 
@@ -9,13 +9,20 @@ import { Footer } from './layout/footer/footer';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit {
   protected readonly title = signal('florezandres.github.io');
   readonly showFooter = signal(false);
 
-  constructor() {
+  constructor(private router: Router) {
     setTimeout(() => {
       this.showFooter.set(true);
     }, 3500);
+  }
+
+  ngOnInit() {
+    if (!sessionStorage.getItem('bootupCompleted')) {
+      sessionStorage.setItem('bootupCompleted', 'true');
+      this.router.navigate(['/bootup']);
+    }
   }
 }

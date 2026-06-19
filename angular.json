@@ -23,6 +23,8 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "assets",
+              "favicon.ico",
               {
                 "glob": "**/*",
                 "input": "src/assets",

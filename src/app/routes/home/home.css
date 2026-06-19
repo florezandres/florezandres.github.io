@@ -1,7 +1,8 @@
 .content { 
     display: flex;
     flex-direction: column;
-    padding-top: 8rem;
+    height: calc(100vh - 5.5rem);   
+    justify-content: center;
 }
 .spinner {
     animation:spin 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
@@ -22,7 +23,7 @@
 .title-bar {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content:space-between;
 }
 
 .title-bar:hover {
@@ -49,6 +50,8 @@
 .basic-info-text img {
     margin-right: 0.4rem;
     vertical-align: middle;
+    height: 28px;
+    width: auto;
 }
 
 .basic-info-text h1,
@@ -64,8 +67,7 @@
     white-space: nowrap;
     margin: 0 auto;
     font-size: 3.5em;
-    font-weight: 600;
-    font-family: 'Alvera Bold Circle', sans-serif;
+    font-variation-settings: 'wght' 900, 'ROND' 100;
 }
 
 .basic-info-text h3 {
@@ -74,7 +76,7 @@
     font-weight: 400;
     margin: 0;
     padding-bottom: 10px;
-    font-family: 'Alvera Regular Circle', sans-serif;
+    font-variation-settings: 'wght' 800, 'ROND' 100;
 }
 
 .basic-info-text h4 {
@@ -82,7 +84,7 @@
     font-weight: 400;
     margin: 0;
     padding-bottom: 10px;
-    font-family: 'Alvera Regular Circle', sans-serif;
+    font-variation-settings: 'wght' 800, 'ROND' 100;
 }
 
 .basic-info-text h3,
@@ -95,6 +97,27 @@
     vertical-align: middle;
 }
 
+#link-contact a,
+#link-resume a {
+    cursor: pointer;
+    gap: 0.5rem;
+    color: #00f7ff;
+    transition: color 0.3s ease;
+    text-decoration:underline 1px;
+    font-variation-settings: 'wght' 800, 'ROND' 100;
+}
+
+#link-contact a:hover,
+#link-resume a:hover {
+    color: #c2fffc;
+    transition: color 0.3s ease;
+    text-decoration: wavy underline 1px;
+}
+
+#link-contact img, #link-resume img {
+    margin-right: 0.5rem;
+}
+
 
 .text-bit {
     height: 1.5rem;
@@ -104,7 +127,7 @@
 /*Bits*/
 
 .bits {
-    margin-top: 5rem;
+    margin-top: 3.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -124,6 +147,7 @@
 
 .bit img {
     height: 25px;
+    width: 25px;
     vertical-align: middle;
     margin-right: 10px;
 }
@@ -136,14 +160,18 @@
 
 a {
     text-decoration: none;
-    font-family: 'Alvera Regular Circle', sans-serif;
+    font-family: doto, times;
+    font-variation-settings: 'wght' 900, 'ROND' 100;
     font-size: 1.25rem;
     color: #0059ff;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline 1px;
     cursor: pointer;
+    color: #00b7ff;
+    transition: color 0.3s ease;
 }
 
 .bits .background {
@@ -162,7 +190,6 @@ a:hover {
 }
 
 #dialog-about {
-    width: calc(100vw - var(--general-padding) * 2);
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -173,6 +200,11 @@ a:hover {
     display: flex;
     flex-direction: column;
     height: 200px;
+}
+
+#dialog-body-about {}
+
+#dialog-about .window-body p {
 }
 
 @keyframes fadeIn {
@@ -195,4 +227,8 @@ a:hover {
     position: fixed; 
     z-index: 10000;
     inset: 0;
+}
+
+.window.glass .title-bar {
+    background-attachment: local !important;
 }

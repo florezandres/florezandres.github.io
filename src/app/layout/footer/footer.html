@@ -6,11 +6,16 @@
             {{ (currentTime.getHours() % 12 === 0 ? 12 : currentTime.getHours() % 12) + ':' + (currentTime.getMinutes() < 10 ? ('0' + currentTime.getMinutes()) : currentTime.getMinutes()) + ' ' + (currentTime.getHours() >= 12 ? 'PM' : 'AM') }}
         </span>
         </div>
+        <div class="theme">
+            <a hidden href="">
+                hola
+            </a>
+        </div>
         <div class="sound">
             <img id="sound-icon" src="assets/icons/sound.ico" alt="Sound Icon">
         </div>
         <div class="network">
-            <img id="network-icon" src="assets/icons/network.ico" alt="Network Icon">
+            <img id="network-icon" src="assets/images/network.webp" alt="Network Icon">
         </div>
         <div class="language">
             <span (click)="onLanguageIconClick()" id="language">EN</span>
@@ -20,13 +25,31 @@
 </footer>
 
 <div id="taskbar-menu" class="taskbar-menu">
+        <div class="left">
+            <div class="left-links">
+                <a href="#dialog-about"><img src="/assets/images/about.webp" alt=""> About</a>
+                <a href="#dialog-resume"><img src="/assets/images/resume.webp" alt=""> Resume</a> 
+                <a href="#dialog-skills"><img src="/assets/images/skills.webp" alt=""> Skills</a>
+                <a href="#dialog-projects"><img src="/assets/images/projects.webp" alt=""> Projects</a>
+                <a href="#dialog-contact"><img src="/assets/images/contact.webp" alt=""> Contact</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Type here to search...">
+            </div>
+        </div>
+        <div class="right">
+            <div class="taskbar-pfp">
+                <img src="assets/images/role.png" alt="Profile Picture">
+            </div>
+        </div>
 </div>
-
+<!--
 <div id="language-tooltip" role="tooltip" class="is-top is-left">
     <p>Change Language</p>
+    <p style="margin: 0; padding: 0;">---</p>
     <p>Cambiar Idioma</p>
 </div>
-
+-->
 <div class="language-options">
     <button id="language-en" class="language-option" (click)="changeLanguage('EN')">EN</button>
     <button id="language-es" class="language-option" (click)="changeLanguage('ES')">ES</button>

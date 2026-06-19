@@ -4,10 +4,12 @@ footer {
     bottom: 0;
     width: 100%;
     background-image: 
-    linear-gradient(180deg, #fff5 1px, transparent 20px);
-    background-color: rgba(0, 0, 0, 0.45);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.40) 40%, transparent 20px);
+    background-color: rgba(8, 13, 17, 0.6);
+    backdrop-filter: blur(10px);
     font-size: 0.75em;
     z-index: 1000;
+    border-top: 0.5px solid rgba(43, 43, 43, 0.5);
 }
 
 #footer-image {
@@ -34,7 +36,7 @@ footer {
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    font-family: 'Alvera Regular Circle', sans-serif;
+    font-family: 'Alvera Regular Circle';
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
@@ -61,7 +63,8 @@ footer {
     right: 8.25rem;
     top: 50%;
     transform: translateY(-50%);
-    font-family: 'Alvera Regular Circle', sans-serif;
+    font-family: Doto, times;
+    font-variation-settings: 'wght' 900, 'ROND' 100;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
@@ -80,23 +83,111 @@ footer {
 
 #taskbar-menu {
     display: none;
+    padding: 0.4rem;
     position: absolute;
-    bottom: 1.75rem;
+    bottom: 1.8rem;
     left: 0;
     background-image: linear-gradient(180deg, #fff5 5px, transparent 20px);
-    background-color: rgba(31, 30, 30, 0.76);
+    background-color: rgba(8, 13, 17, 0.6);
     height: 20rem;
     z-index: 999;
     width: 18rem;
+    backdrop-filter: blur(8px);
     border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 5px 5px 0 0;
-    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.40);
-    box-shadow: 2px 2px 10px 1px var(--w7-w-bd),inset 0 0 0 1px rgba(202, 202, 202, 0.5);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    box-shadow: 2px 2px 7px 1px var(--w7-w-bd),inset 0 0 0 1px rgba(202, 202, 202, 0.5);
     border: 0.8px solid rgba(0, 0, 0, 0.671);
     animation: slideUp 0.15s ease-out;
 }
 
+.taskabar-menu-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 0.3rem;
+}
+
+.left{
+    width: 60%;
+}
+
+.left-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255);
+    border-radius: var(--internal-border-radius);
+    height: 85%;
+}
+
+.left-links a {
+    font-family: doto, times;
+    font-variation-settings: 'wght' 800, 'ROND' 100;
+    color: #000;
+    text-decoration: none;
+    padding: 0.3rem;
+    margin: 0;
+    border-radius: var(--internal-border-radius);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.left-links img {
+    height: 25px;
+    width: auto;
+    margin-right: 0.25rem;
+    vertical-align: middle;
+}
+
+.left-links a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #0059ff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.search input {
+    padding: 0.3rem;
+    margin-top: 0.4rem;
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+.right{
+    width: 40%;
+}
+
+.taskbar-pfp {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    transform: translate(40%, -50%);
+}
+
+.taskbar-pfp img {
+    margin: 0 auto;
+    align-self: center;
+    height: 70px;
+    width: auto;
+}
+
+.theme {
+    position: absolute;
+    right: 10.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Doto, times;
+    font-variation-settings: 'wght' 900, 'ROND' 100;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.theme a {
+    color: inherit;
+    text-decoration: none;
+}
+
 #language-tooltip {
+    color: #000000;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -117,6 +208,8 @@ footer {
 #language-tooltip p {
     margin: 0;
     text-align: left;
+    font-family: Doto, times;
+    font-variation-settings: 'wght' 900, 'ROND' 100;
 }
 
 #language-tooltip.visible {
