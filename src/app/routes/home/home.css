@@ -404,6 +404,28 @@ a:hover {
   color: #1a3f8a;
 }
 
+/* Contact dialog */
+#dialog-body-contact {
+  padding-bottom: 0;
+}
+
+#dialog-body-contact fieldset {
+  margin-bottom: 8px;
+}
+
+.contact-location {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 8px;
+}
+
+.contact-location-value {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+
 /*Loading screen*/
 .overlay { 
     display: flex;

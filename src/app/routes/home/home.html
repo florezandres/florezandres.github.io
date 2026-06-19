@@ -378,23 +378,54 @@
         </div>
         <!-- Dialog for Contact -->
         <div class="window glass active" id="dialog-contact" role="dialog" aria-labelledby="dialog-title-contact">
-            <div class="title-bar">
-                <div class="title-bar-text" id="dialog-title-contact">Contact</div>
-                <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Close" onclick="history.back()"></button>
-                </div>
+        <div class="title-bar">
+            <div class="title-bar-text" id="dialog-title-contact">Contact</div>
+            <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Close" onclick="history.back()"></button>
             </div>
-            <div id="dialog-body-contact" class="window-body has-space">
-                <p>You can contact me through the following channels:</p>
-                <ul>
-                    <li>Email: <a href="mailto:andresflorezit@gmail.com">andresflorezit@gmail.com</a></li>
-                    <li>LinkedIn: <a href="https://linkedin.com/in/example" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
-                </ul>
+        </div>
+        <div id="dialog-body-contact" class="window-body has-space">
+
+            <fieldset>
+            <legend>Get in Touch</legend>
+            <div class="about-contact-grid">
+                <a class="about-contact-item" href="mailto:andresflorezit@gmail.com">
+                <span class="about-contact-label">Email</span>
+                <span class="about-contact-value">andresflorezit@gmail.com</span>
+                </a>
+                <a class="about-contact-item" href="tel:+573156146157">
+                <span class="about-contact-label">Phone</span>
+                <span class="about-contact-value">+57 315 614 6157</span>
+                </a>
+                <a class="about-contact-item" href="https://www.linkedin.com/in/andresflorezit/" target="_blank" rel="noopener noreferrer">
+                <span class="about-contact-label">LinkedIn</span>
+                <span class="about-contact-value">andresflorezit</span>
+                </a>
+                <a class="about-contact-item" href="https://github.com/florezandres" target="_blank" rel="noopener noreferrer">
+                <span class="about-contact-label">GitHub</span>
+                <span class="about-contact-value">florezandres</span>
+                </a>
             </div>
-            <footer hidden style="text-align: right">
-                <button onclick="history.back()">Cancel</button>
-            </footer>
+            </fieldset>
+
+            <fieldset>
+            <legend>Location</legend>
+            <div class="contact-location">
+                <span class="about-contact-label">Based in</span>
+                <span class="contact-location-value">Bogotá D.C., Colombia</span>
+            </div>
+            </fieldset>
+
+            <div class="exp-statusbar">
+            <span class="exp-statusbar-cell">Open to opportunities</span>
+            <span class="exp-statusbar-cell">Cloud · DevOps · Platform</span>
+            </div>
+
+        </div>
+        <footer hidden style="text-align: right">
+            <button onclick="history.back()">Cancel</button>
+        </footer>
         </div>
     </section>
 </div>
