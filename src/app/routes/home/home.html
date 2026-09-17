@@ -23,10 +23,10 @@
         </div>
         <div class="basic-info-text">
             <h2 style="font-family: Alvera Bold Circle;">Andres Felipe Florez</h2>
-            <h3><img class="svg-basic-info" src="/assets/images/role.png" alt="Cloud Icon" >Automation & IT Operations Engineer - ITSM<!----></h3>
-            <h4><img class="svg-basic-info" src="/assets/images/location.png" alt="Location Icon">Avianca - Bogotá DC, Colombia</h4>
+            <h3><img class="svg-basic-info" src="/assets/images/role.png" alt="Cloud Icon" >Infrastructure Support Engineer @ Avianca<!----></h3>
+            <h4><img class="svg-basic-info" src="/assets/images/location.png" alt="Location Icon">Bogotá DC, Colombia</h4>
             <div style="display: flex; flex-direction: row; gap: 0.5rem;" class="contact">
-                <h4 style="align-items: center;" id="link-contact"><img src="/assets/images/contact.webp" alt="Contact Icon"><a href="#dialog-contact">Contact</a></h4>
+                <h4 style="align-items: center;" id="link-contact"><img src="/assets/images/contact.webp" alt="Contact Icon"><a href="#info-contact">Contact</a></h4>
                 <h4 hidden style="align-items: center;" id="link-resume"><img src="/assets/images/resume.webp" alt="Resume Icon"><a href="/assets/docs/CV EN Andres Florez.pdf" target="_blank">Resume</a></h4>
             </div>
         </div>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="window-body has-space">
                     <div class="bit" style="border: none;">
-                        <a class="link" href="#dialog-about"><img src="/assets/images/about.webp" alt="about icon">About Me</a>
+                        <a class="link" href="#info-about"><img src="/assets/images/about.webp" alt="about icon">About Me</a>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="window-body has-space">
                     <div class="bit" style="border: none;">
-                        <a class="link" href="#dialog-experience"><img src="/assets/images/experience.webp" alt="experience icon">Experience</a>
+                        <a class="link" href="#info-experience"><img src="/assets/images/experience.webp" alt="experience icon">Experience</a>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="window-body has-space">
                     <div class="bit" style="border: none;">
-                        <a class="link" href="#dialog-skills"><img src="/assets/images/skills.webp" alt="skills icon">Skills</a>
+                        <a class="link" href="#info-skills"><img src="/assets/images/skills.webp" alt="skills icon">Skills</a>
                     </div>
                 </div>
             </div>
@@ -119,300 +119,256 @@
                 </div>
                 <div class="window-body has-space">
                     <div class="bit" style="border: none;">
-                        <a class="link" href="#dialog-projects"><img src="/assets/images/projects.webp" alt="projects icon">Projects</a>
+                        <a class="link" href="#info-projects"><img src="/assets/images/projects.webp" alt="projects icon">Projects</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Dialog for About -->
-        <div class="window glass active" id="dialog-about" role="dialog" aria-labelledby="dialog-title-about">
+        <!-- Unified info dialog: one window, scrolled to the section that was linked -->
+        <div class="window glass active" id="dialog-info" role="dialog" aria-labelledby="dialog-title-info">
         <div class="title-bar">
-            <div class="title-bar-text" id="dialog-title-about">About Me</div>
+            <div class="title-bar-text" id="dialog-title-info">Andrés Florez - Portfolio</div>
             <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
             <button aria-label="Close" onclick="history.back()"></button>
             </div>
         </div>
-        <div id="dialog-body-about" class="window-body has-space">
+        <div id="dialog-body-info" class="window-body has-space">
 
+            <div id="info-about" class="info-section">
             <fieldset>
-            <legend>Andrés Felipe Florez Buitrago</legend>
-            <p class="about-para">Systems Engineer based in Bogotá, graduating from Pontificia Universidad Javeriana in June 2026. I've spent the last year and a half building automation workflows, cloud integrations, and data pipelines at Avianca - work that started as an internship and grew into something I'm genuinely proud of.</p>
-            <p class="about-para">My focus is on Cloud and DevOps engineering: designing systems that are observable, automated, and maintainable. I'm drawn to the intersection of infrastructure and software - where scripting meets architecture and reliability is built deliberately.</p>
-            <p class="about-para">Outside of Avianca, I built a distributed monitoring environment from scratch and developed OWL, a data platform for Colombian investment funds that earned a Meritorious Thesis distinction. I'm currently preparing for my AWS CCP certification and looking for my next challenge in Cloud or Platform engineering.</p>
+                <legend>Andrés Felipe Florez Buitrago</legend>
+                <p class="about-para">Systems Engineer based in Bogotá, graduating from Pontificia Universidad Javeriana in June 2026. I've spent the last year and a half building automation workflows, cloud integrations, and data pipelines at Avianca - work that started as an internship and grew into something I'm genuinely proud of.</p>
+                <p class="about-para">My focus is on Cloud and DevOps engineering: designing systems that are observable, automated, and maintainable. I'm drawn to the intersection of infrastructure and software - where scripting meets architecture and reliability is built deliberately.</p>
+                <p class="about-para">Outside of Avianca, I built a distributed monitoring environment from scratch and developed OWL, a data platform for Colombian investment funds that earned a Meritorious Thesis distinction. I'm currently preparing for my AWS CCP certification and looking for my next challenge in Cloud or Platform engineering.</p>
             </fieldset>
 
             <fieldset>
-            <legend>Contact</legend>
-            <div class="about-contact-grid">
+                <legend>Contact</legend>
+                <div class="about-contact-grid">
                 <a class="about-contact-item" href="mailto:andresflorezit@gmail.com">
-                <span class="about-contact-label">Email</span>
-                <span class="about-contact-value">andresflorezit@gmail.com</span>
+                    <span class="about-contact-label">Email</span>
+                    <span class="about-contact-value">andresflorezit@gmail.com</span>
                 </a>
                 <a class="about-contact-item" href="https://www.linkedin.com/in/andresflorezit/" target="_blank">
-                <span class="about-contact-label">LinkedIn</span>
-                <span class="about-contact-value">andresflorezit</span>
+                    <span class="about-contact-label">LinkedIn</span>
+                    <span class="about-contact-value">andresflorezit</span>
                 </a>
                 <a class="about-contact-item" href="https://github.com/florezandres" target="_blank">
-                <span class="about-contact-label">GitHub</span>
-                <span class="about-contact-value">florezandres</span>
+                    <span class="about-contact-label">GitHub</span>
+                    <span class="about-contact-value">florezandres</span>
                 </a>
                 <a class="about-contact-item" href="http://florezandres.github.io/" target="_blank">
-                <span class="about-contact-label">Website</span>
-                <span class="about-contact-value">florezandres.github.io</span>
+                    <span class="about-contact-label">Website</span>
+                    <span class="about-contact-value">florezandres.github.io</span>
                 </a>
-            </div>
+                </div>
             </fieldset>
 
             <div class="exp-statusbar">
-            <span class="exp-statusbar-cell">Bogotá, Colombia</span>
-            <span class="exp-statusbar-cell">Open to opportunities</span>
+                <span class="exp-statusbar-cell">Bogotá, Colombia</span>
+                <span class="exp-statusbar-cell">Open to opportunities</span>
+            </div>
             </div>
 
-        </div>
-        <footer hidden style="text-align: right">
-            <button onclick="history.back()">Cancel</button>
-        </footer>
-        </div>
-        <!-- Dialog for Experience -->
-        <div class="window glass active" id="dialog-experience" role="dialog" aria-labelledby="dialog-title">
-        <div class="title-bar">
-            <div class="title-bar-text" id="dialog-title">Experience</div>
-            <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Close" onclick="history.back()"></button>
-            </div>
-        </div>
-        <div id="dialog-body-experience" class="window-body has-space">
+            <div class="exp-divider"><hr><hr></div>
 
+            <div id="info-experience" class="info-section">
             <fieldset>
-            <legend>Work Experience</legend>
+                <legend>Work Experience</legend>
 
-            <div class="exp-company-row">
+                <div class="exp-company-row">
                 <div class="exp-company-info">
-                <div class="exp-title">Automation & IT Operations Engineer</div>
-                <div class="exp-company">Avianca</div>
+                    <div class="exp-title">Automation & IT Operations Engineer</div>
+                    <div class="exp-company">Avianca</div>
                 </div>
-            </div>
-            <div class="exp-date-badge">Jan 2026 - Present</div>
-            <p class="exp-desc">Building cloud-based monitoring and incident automation workflows.</p>
-            <p class="exp-desc">Developing secure integrations between enterprise platforms, REST APIs, and Azure Key Vault.</p>
-            <p class="exp-desc">Designing data pipelines and Power BI dashboards for operational visibility and decision-making.</p>
-            <div class="exp-tags">
+                </div>
+                <div class="exp-date-badge">Jan 2026 - Present</div>
+                <p class="exp-desc">Building cloud-based monitoring and incident automation workflows.</p>
+                <p class="exp-desc">Developing secure integrations between enterprise platforms, REST APIs, and Azure Key Vault.</p>
+                <p class="exp-desc">Designing data pipelines and Power BI dashboards for operational visibility and decision-making.</p>
+                <div class="exp-tags">
                 <span class="exp-tag">Cloud</span>
                 <span class="exp-tag">ServiceNow</span>
                 <span class="exp-tag">PowerShell</span>
                 <span class="exp-tag">Azure Key Vault</span>
                 <span class="exp-tag">Power BI</span>
                 <span class="exp-tag">REST APIs</span>
-            </div>
-
-            <div class="exp-divider"><hr><hr></div>
-
-            <div class="exp-company-row">
-                <div class="exp-company-info">
-                <div class="exp-title">Software Engineering Intern</div>
-                <div class="exp-company">Prana Incubadora</div>
                 </div>
-            </div>
-            <div class="exp-date-badge exp-date-badge--past">Jan 2025 - Jun 2025</div>
-            <p class="exp-desc">Collaborated with cross-functional teams to optimize core platform modules using Angular and TypeScript.</p>
-            <p class="exp-desc">Led the migration from Netlify to Render, improving performance and deployment maintainability.</p>
-            <div class="exp-tags">
+
+                <div class="exp-divider"><hr><hr></div>
+
+                <div class="exp-company-row">
+                <div class="exp-company-info">
+                    <div class="exp-title">Software Engineering Intern</div>
+                    <div class="exp-company">Prana Incubadora</div>
+                </div>
+                </div>
+                <div class="exp-date-badge exp-date-badge--past">Jan 2025 - Jun 2025</div>
+                <p class="exp-desc">Collaborated with cross-functional teams to optimize core platform modules using Angular and TypeScript.</p>
+                <p class="exp-desc">Led the migration from Netlify to Render, improving performance and deployment maintainability.</p>
+                <div class="exp-tags">
                 <span class="exp-tag">Angular</span>
                 <span class="exp-tag">TypeScript</span>
                 <span class="exp-tag">Render</span>
                 <span class="exp-tag">Netlify</span>
-            </div>
+                </div>
             </fieldset>
 
             <div class="exp-statusbar">
-            <span class="exp-statusbar-cell">2 items</span>
-            <span class="exp-statusbar-cell">Systems Engineering</span>
+                <span class="exp-statusbar-cell">2 items</span>
+                <span class="exp-statusbar-cell">Systems Engineering</span>
+            </div>
             </div>
 
-        </div>
-        <footer hidden style="text-align: right">
-            <button onclick="history.back()">Cancel</button>
-        </footer>
-        </div>
-        <!-- Dialog for Skills -->
-        <div class="window glass active" id="dialog-skills" role="dialog" aria-labelledby="dialog-title-skills">
-        <div class="title-bar">
-            <div class="title-bar-text" id="dialog-title-skills">Skills</div>
-            <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Close" onclick="history.back()"></button>
-            </div>
-        </div>
-        <div id="dialog-body-skills" class="window-body has-space">
-        <fieldset>
-            <legend>Cloud & Infrastructure</legend>
-            <div class="exp-tags">
-            <span class="exp-tag exp-tag--icon"><i class="devicon-amazonwebservices-plain-wordmark"></i>AWS</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-azure-plain"></i>Azure</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-docker-plain"></i>Docker</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-linux-plain"></i>Linux</span>
-            </div>
-        </fieldset>
+            <div class="exp-divider"><hr><hr></div>
 
-        <fieldset>
-            <legend>Automation & Scripting</legend>
-            <div class="exp-tags">
-            <span class="exp-tag exp-tag--icon"><i class="devicon-python-plain"></i>Python</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-powershell-plain"></i>PowerShell</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-bash-plain"></i>Bash</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-githubactions-plain"></i>GitHub Actions</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-terraform-plain"></i>Terraform</span>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>Platforms & Integration</legend>
-            <div class="exp-tags">
-            <span class="exp-tag exp-tag--icon"><i class="devicon-postgresql-plain"></i>PostgreSQL</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-grafana-plain"></i>Grafana</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-prometheus-plain"></i>Prometheus</span>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>Development</legend>
-            <div class="exp-tags">
-            <span class="exp-tag exp-tag--icon"><i class="devicon-javascript-plain"></i>JavaScript</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-typescript-plain"></i>TypeScript</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-angularjs-plain"></i>Angular</span>
-            <span class="exp-tag exp-tag--icon"><i class="devicon-git-plain"></i>Git</span>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>Certifications</legend>
-            <div class="exp-tags">
-            <span class="exp-tag exp-tag--cert">AWS Certified Cloud Practitioner - Jul. 2026</span>
-            <span class="exp-tag exp-tag--cert">IELTS Academic C1</span>
-            </div>
-        </fieldset>
-
-        <div class="exp-statusbar">
-            <span class="exp-statusbar-cell">5 categories</span>
-            <span class="exp-statusbar-cell">Cloud & Automation Engineer</span>
-        </div>
-
-        </div>
-        <footer hidden style="text-align: right">
-            <button onclick="history.back()">Cancel</button>
-        </footer>
-        </div>
-        <!-- Dialog for Projects -->
-        <div class="window glass active" id="dialog-projects" role="dialog" aria-labelledby="dialog-title-projects">
-        <div class="title-bar">
-            <div class="title-bar-text" id="dialog-title-projects">Projects</div>
-            <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Close" onclick="history.back()"></button>
-            </div>
-        </div>
-        <div id="dialog-body-projects" class="window-body has-space">
+            <div id="info-skills" class="info-section">
+            <fieldset>
+                <legend>Cloud & Infrastructure</legend>
+                <div class="exp-tags">
+                <span class="exp-tag exp-tag--icon"><i class="devicon-amazonwebservices-plain-wordmark"></i>AWS</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-azure-plain"></i>Azure</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-docker-plain"></i>Docker</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-linux-plain"></i>Linux</span>
+                </div>
+            </fieldset>
 
             <fieldset>
-            <legend>Projects</legend>
-
-            <div class="exp-company-row">
-                <div class="exp-company-info">
-                <div class="exp-title">Distributed Architecture & DevOps Automation</div>
-                <div class="exp-company">Personal Project</div>
+                <legend>Automation & Scripting</legend>
+                <div class="exp-tags">
+                <span class="exp-tag exp-tag--icon"><i class="devicon-python-plain"></i>Python</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-powershell-plain"></i>PowerShell</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-bash-plain"></i>Bash</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-githubactions-plain"></i>GitHub Actions</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-terraform-plain"></i>Terraform</span>
                 </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Platforms & Integration</legend>
+                <div class="exp-tags">
+                <span class="exp-tag exp-tag--icon"><i class="devicon-postgresql-plain"></i>PostgreSQL</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-grafana-plain"></i>Grafana</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-prometheus-plain"></i>Prometheus</span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Development</legend>
+                <div class="exp-tags">
+                <span class="exp-tag exp-tag--icon"><i class="devicon-javascript-plain"></i>JavaScript</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-typescript-plain"></i>TypeScript</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-angularjs-plain"></i>Angular</span>
+                <span class="exp-tag exp-tag--icon"><i class="devicon-git-plain"></i>Git</span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Certifications</legend>
+                <div class="exp-tags">
+                <span class="exp-tag exp-tag--cert">AWS Certified Cloud Practitioner - Jul. 2026</span>
+                <span class="exp-tag exp-tag--cert">IELTS Academic C1</span>
+                </div>
+            </fieldset>
+
+            <div class="exp-statusbar">
+                <span class="exp-statusbar-cell">5 categories</span>
+                <span class="exp-statusbar-cell">Cloud & Automation Engineer</span>
             </div>
-            <div class="exp-date-badge exp-date-badge--past">Jun. 2025</div>
-            <p class="exp-desc">Designed and deployed a distributed environment with automated CI/CD pipelines using GitHub Actions and self-hosted runners across QA and Production.</p>
-            <p class="exp-desc">Containerized services with Docker and Docker Compose, administering Linux servers and PostgreSQL databases.</p>
-            <p class="exp-desc">Implemented an observability stack with Prometheus, Grafana, Loki, and Node Exporter for centralized monitoring and alerting.</p>
-            <div class="exp-tags">
+            </div>
+
+            <div class="exp-divider"><hr><hr></div>
+
+            <div id="info-projects" class="info-section">
+            <fieldset>
+                <legend>Projects</legend>
+
+                <div class="exp-company-row">
+                <div class="exp-company-info">
+                    <div class="exp-title">Distributed Architecture & DevOps Automation</div>
+                    <div class="exp-company">Personal Project</div>
+                </div>
+                </div>
+                <div class="exp-date-badge exp-date-badge--past">Jun. 2025</div>
+                <p class="exp-desc">Designed and deployed a distributed environment with automated CI/CD pipelines using GitHub Actions and self-hosted runners across QA and Production.</p>
+                <p class="exp-desc">Containerized services with Docker and Docker Compose, administering Linux servers and PostgreSQL databases.</p>
+                <p class="exp-desc">Implemented an observability stack with Prometheus, Grafana, Loki, and Node Exporter for centralized monitoring and alerting.</p>
+                <div class="exp-tags">
                 <span class="exp-tag">Docker</span>
                 <span class="exp-tag">GitHub Actions</span>
                 <span class="exp-tag">Linux</span>
                 <span class="exp-tag">PostgreSQL</span>
                 <span class="exp-tag">Prometheus</span>
                 <span class="exp-tag">Grafana</span>
-            </div>
-
-            <div class="exp-divider"><hr><hr></div>
-
-            <div class="exp-company-row">
-                <div class="exp-company-info">
-                <div class="exp-title">OWL — Thesis Project</div>
-                <div class="exp-company">Pontificia Universidad Javeriana · Meritorious Distinction</div>
                 </div>
-            </div>
-            <div class="exp-date-badge exp-date-badge--past">Dec. 2025</div>
-            <p class="exp-desc">Full-stack platform centralizing Colombian Collective Investment Fund data via web scraping, ETL pipelines, and Airflow orchestration.</p>
-            <p class="exp-desc">Transformed fragmented financial market data into a scalable store for investment analysis and decision-making.</p>
-            <div class="exp-tags">
+
+                <div class="exp-divider"><hr><hr></div>
+
+                <div class="exp-company-row">
+                <div class="exp-company-info">
+                    <div class="exp-title">OWL - Thesis Project</div>
+                    <div class="exp-company">Pontificia Universidad Javeriana · Meritorious Distinction</div>
+                </div>
+                </div>
+                <div class="exp-date-badge exp-date-badge--past">Dec. 2025</div>
+                <p class="exp-desc">Full-stack platform centralizing Colombian Collective Investment Fund data via web scraping, ETL pipelines, and Airflow orchestration.</p>
+                <p class="exp-desc">Transformed fragmented financial market data into a scalable store for investment analysis and decision-making.</p>
+                <div class="exp-tags">
                 <span class="exp-tag">Angular</span>
                 <span class="exp-tag">Python</span>
                 <span class="exp-tag">Airflow</span>
                 <span class="exp-tag">PostgreSQL</span>
                 <span class="exp-tag">ETL</span>
                 <span class="exp-tag">Web Scraping</span>
-            </div>
+                </div>
             </fieldset>
 
             <div class="exp-statusbar">
-            <span class="exp-statusbar-cell">2 items</span>
-            <span class="exp-statusbar-cell">GitHub</span>
+                <span class="exp-statusbar-cell">2 items</span>
+                <span class="exp-statusbar-cell">GitHub</span>
+            </div>
             </div>
 
-        </div>
-        <footer hidden style="text-align: right">
-            <button onclick="history.back()">Cancel</button>
-        </footer>
-        </div>
-        <!-- Dialog for Contact -->
-        <div class="window glass active" id="dialog-contact" role="dialog" aria-labelledby="dialog-title-contact">
-        <div class="title-bar">
-            <div class="title-bar-text" id="dialog-title-contact">Contact</div>
-            <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Close" onclick="history.back()"></button>
-            </div>
-        </div>
-        <div id="dialog-body-contact" class="window-body has-space">
+            <div class="exp-divider"><hr><hr></div>
 
+            <div id="info-contact" class="info-section">
             <fieldset>
-            <legend>Get in Touch</legend>
-            <div class="about-contact-grid">
+                <legend>Get in Touch</legend>
+                <div class="about-contact-grid">
                 <a class="about-contact-item" href="mailto:andresflorezit@gmail.com">
-                <span class="about-contact-label">Email</span>
-                <span class="about-contact-value">andresflorezit@gmail.com</span>
+                    <span class="about-contact-label">Email</span>
+                    <span class="about-contact-value">andresflorezit@gmail.com</span>
                 </a>
                 <a class="about-contact-item" href="tel:+573156146157">
-                <span class="about-contact-label">Phone</span>
-                <span class="about-contact-value">+57 315 614 6157</span>
+                    <span class="about-contact-label">Phone</span>
+                    <span class="about-contact-value">+57 315 614 6157</span>
                 </a>
                 <a class="about-contact-item" href="https://www.linkedin.com/in/andresflorezit/" target="_blank" rel="noopener noreferrer">
-                <span class="about-contact-label">LinkedIn</span>
-                <span class="about-contact-value">andresflorezit</span>
+                    <span class="about-contact-label">LinkedIn</span>
+                    <span class="about-contact-value">andresflorezit</span>
                 </a>
                 <a class="about-contact-item" href="https://github.com/florezandres" target="_blank" rel="noopener noreferrer">
-                <span class="about-contact-label">GitHub</span>
-                <span class="about-contact-value">florezandres</span>
+                    <span class="about-contact-label">GitHub</span>
+                    <span class="about-contact-value">florezandres</span>
                 </a>
-            </div>
+                </div>
             </fieldset>
 
             <fieldset>
-            <legend>Location</legend>
-            <div class="contact-location">
+                <legend>Location</legend>
+                <div class="contact-location">
                 <span class="about-contact-label">Based in</span>
                 <span class="contact-location-value">Bogotá D.C., Colombia</span>
-            </div>
+                </div>
             </fieldset>
 
             <div class="exp-statusbar">
-            <span class="exp-statusbar-cell">Open to opportunities</span>
-            <span class="exp-statusbar-cell">Cloud · DevOps · Platform</span>
+                <span class="exp-statusbar-cell">Open to opportunities</span>
+                <span class="exp-statusbar-cell">Cloud · DevOps · Platform</span>
+            </div>
             </div>
 
         </div>

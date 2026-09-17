@@ -189,16 +189,19 @@ a:hover {
     color: #ffffff;
 }
 
-#dialog-about {
+#dialog-info {
     display: flex;
     flex-direction: column;
     padding: 0;
+    width: 80%;
+    height: 80%;
 }
 
-#dialog-about .window-body {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
+/* Keep the unified dialog open when any of its internal sections is the
+   URL fragment target, not just the dialog element itself. */
+.window[role="dialog"]:has(:target) {
+    opacity: 1;
+    visibility: visible;
 }
 
 @keyframes fadeIn {
@@ -212,13 +215,21 @@ a:hover {
     }
 }
 
-/* About dialog */
-#dialog-body-about {
+/* Unified info dialog: internal sections are anchor-scroll targets so the
+   same dialog opens positioned at whichever section was linked. */
+#dialog-body-info {
   padding-bottom: 0;
+  max-height: 80vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
-#dialog-body-about fieldset {
+#dialog-body-info fieldset {
   margin-bottom: 8px;
+}
+
+.info-section {
+  scroll-margin-top: 0.5rem;
 }
 
 .about-para {
@@ -266,15 +277,6 @@ a:hover {
 .about-contact-value {
   font-size: 11px;
   color: #316ac5;
-}
-
-/* Experience dialog */
-#dialog-body-experience {
-  padding-bottom: 0;
-}
-
-#dialog-body-experience fieldset {
-  margin-bottom: 8px;
 }
 
 .exp-company-row {
@@ -377,15 +379,6 @@ a:hover {
   color: #333;
 }
 
-/* Skills dialog */
-#dialog-body-skills {
-  padding-bottom: 0;
-}
-
-#dialog-body-skills fieldset {
-  margin-bottom: 8px;
-}
-
 .exp-tag--icon {
   display: inline-flex;
   flex-direction: column;
@@ -401,15 +394,6 @@ a:hover {
   line-height: 1;
 }
 
-/* Projects dialog */
-#dialog-body-projects {
-  padding-bottom: 0;
-}
-
-#dialog-body-projects fieldset {
-  margin-bottom: 8px;
-}
-
 /* Cert tag variant */
 .exp-tag--cert {
   background: linear-gradient(to bottom, #e8f0fe, #d0e0f8);
@@ -417,15 +401,6 @@ a:hover {
   border-bottom-color: #4a78b8;
   border-right-color: #4a78b8;
   color: #1a3f8a;
-}
-
-/* Contact dialog */
-#dialog-body-contact {
-  padding-bottom: 0;
-}
-
-#dialog-body-contact fieldset {
-  margin-bottom: 8px;
 }
 
 .contact-location {

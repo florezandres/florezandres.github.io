@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/styles.css"],
+  "sourcesContent": ["/* You can add global styles to this file, and also import other style files */\nhtml, body {\n  margin: 0;\n  padding: 0;\n  min-height: 100%;\n  overflow: hidden;\n}\n\n:root {\n    --general-padding: 11rem;\n    --border-radius: 5px;\n    --internal-border-radius: 3px;\n}\n\n@font-face {\n  font-family: 'Alvera Regular Circle';\n  src: url('/assets/fonts/alvera-demo/AlveraDEMO-RegularCircle.otf') format('opentype');\n  font-weight: normal;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: 'Alvera Bold Circle';\n  src: url('/assets/fonts/alvera-demo/AlveraDEMO-BoldCircle.otf') format('opentype');\n  font-weight: bold;\n  font-style: normal;\n  font-display: swap;\n}\n\nbody {\n  font-family: 'Doto', times;\n}\n\n/*\nbody {\n  font-family: 'Alvera Regular Circle', sans-serif;\n}\n\nbody {\n  font-family: 'Alvera Regular Circle', sans-serif;\n  background-image: url('/assets/images/vid1337.webm');\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-attachment: fixed;\n}\n*/"],
+  "mappings": ";AACA;AAAM;AACJ,UAAQ;AACR,WAAS;AACT,cAAY;AACZ,YAAU;AACZ;AAEA;AACI,qBAAmB;AACnB,mBAAiB;AACjB,4BAA0B;AAC9B;AAEA;AACE,eAAa;AACb,OAAK,4DAA8D,OAAO;AAC1E,eAAa;AACb,cAAY;AACZ,gBAAc;AAChB;AAEA;AACE,eAAa;AACb,OAAK,yDAA2D,OAAO;AACvE,eAAa;AACb,cAAY;AACZ,gBAAc;AAChB;AAEA;AACE,eAAa,MAAM,EAAE;AACvB;",
+  "names": []
+}

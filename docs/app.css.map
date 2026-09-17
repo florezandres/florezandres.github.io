@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/app.css"],
+  "sourcesContent": ["body {\n    margin: 0;\n    padding: 0;\n}\n\n#content {\n    padding-left: var(--general-padding);\n    padding-right: var(--general-padding);\n    height: 100vh;\n    background-image: url('/assets/images/background3.jpg');\n    background-size: cover;\n    background-position: center;\n}\n\n.video-background {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  z-index: -1;\n}"],
+  "mappings": ";AAAA;AACI,UAAQ;AACR,WAAS;AACb;AAEA,CAAC;AACG,gBAAc,IAAI;AAClB,iBAAe,IAAI;AACnB,UAAQ;AACR,oBAAkB;AAClB,mBAAiB;AACjB,uBAAqB;AACzB;AAEA,CAAC;AACC,YAAU;AACV,OAAK;AACL,QAAM;AACN,SAAO;AACP,UAAQ;AACR,cAAY;AACZ,WAAS;AACX;",
+  "names": []
+}

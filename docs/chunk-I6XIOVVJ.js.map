@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/layout/loading-screen/loading-screen.ts", "src/app/layout/loading-screen/loading-screen.html"],
+  "sourcesContent": ["import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-loading-screen',\n  imports: [],\n  templateUrl: './loading-screen.html',\n  styleUrl: './loading-screen.css',\n})\nexport class LoadingScreen implements OnInit {\n  ngOnInit() {\n    try {\n      const audio = new Audio('/assets/mp3/windows-vista-startup.mp3');\n      audio.play().catch(() => {});\n    } catch (e) {\n    }\n    setTimeout(() => {\n      window.location.href = '/';\n    }, 4000);\n  }\n}\n", "<div class=\"bootup\">\n    <img src=\"/assets/gifs/windows-vista-vista-boot.gif\" alt=\"\">\n</div>"],
+  "mappings": ";;;;;;;;;;;AAQM,IAAO,gBAAP,MAAO,eAAa;EACxB,WAAQ;AACN,QAAI;AACF,YAAM,QAAQ,IAAI,MAAM,uCAAuC;AAC/D,YAAM,KAAI,EAAG,MAAM,MAAK;MAAE,CAAC;IAC7B,SAAS,GAAG;IACZ;AACA,eAAW,MAAK;AACd,aAAO,SAAS,OAAO;IACzB,GAAG,GAAI;EACT;;qCAVW,gBAAa;EAAA;yEAAb,gBAAa,WAAA,CAAA,CAAA,oBAAA,CAAA,GAAA,OAAA,GAAA,MAAA,GAAA,QAAA,CAAA,CAAA,GAAA,QAAA,GAAA,CAAA,OAAA,6CAAA,OAAA,EAAA,CAAA,GAAA,UAAA,SAAA,uBAAA,IAAA,KAAA;AAAA,QAAA,KAAA,GAAA;ACR1B,MAAA,4BAAA,GAAA,OAAA,CAAA;AACI,MAAA,uBAAA,GAAA,OAAA,CAAA;AACJ,MAAA,0BAAA;;;;;sEDMa,eAAa,CAAA;UANzB;uBACW,sBAAoB,SACrB,CAAA,GAAE,UAAA,kGAAA,QAAA,CAAA,6TAAA,EAAA,CAAA;;;;6EAIA,eAAa,EAAA,WAAA,iBAAA,UAAA,mDAAA,YAAA,EAAA,CAAA;AAAA,GAAA;",
+  "names": []
+}
